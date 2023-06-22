@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import useMarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
@@ -16,7 +17,6 @@ const ComicsList = () => {
 
 	useEffect(() => {
 		onRequest(offset, true);
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const onRequest = (offset, initial) => {
